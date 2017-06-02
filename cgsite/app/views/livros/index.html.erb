@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Livros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome autor</th>
+      <th>Sobrenome autor</th>
+      <th>Registro</th>
+      <th>Titulo</th>
+      <th>Cdu</th>
+      <th>Idioma livro</th>
+      <th>Nome serie</th>
+      <th>Volume serie</th>
+      <th>Editora</th>
+      <th>Ano</th>
+      <th>Edicao</th>
+      <th>Isbn</th>
+      <th>Data aquisicao</th>
+      <th>Origem aquisicao</th>
+      <th>Classificacao etaria</th>
+      <th>Renovavel</th>
+      <th>Link download</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @livros.each do |livro| %>
+      <tr>
+        <td><%= livro.nome_autor %></td>
+        <td><%= livro.sobrenome_autor %></td>
+        <td><%= livro.registro %></td>
+        <td><%= livro.titulo %></td>
+        <td><%= livro.cdu %></td>
+        <td><%= livro.idioma_livro %></td>
+        <td><%= livro.nome_serie %></td>
+        <td><%= livro.volume_serie %></td>
+        <td><%= livro.editora %></td>
+        <td><%= livro.ano %></td>
+        <td><%= livro.edicao %></td>
+        <td><%= livro.isbn %></td>
+        <td><%= livro.data_aquisicao %></td>
+        <td><%= livro.origem_aquisicao %></td>
+        <td><%= livro.classificacao_etaria %></td>
+        <td><%= livro.renovavel %></td>
+        <td><%= livro.link_download %></td>
+        <td><%= link_to 'Show', livro %></td>
+        <td><%= link_to 'Edit', edit_livro_path(livro) %></td>
+        <td><%= link_to 'Destroy', livro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Livro', new_livro_path %>

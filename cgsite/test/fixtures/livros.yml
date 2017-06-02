@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome_autor: MyString
+  sobrenome_autor: MyString
+  registro: 1
+  titulo: MyString
+  cdu: 1
+  idioma_livro: MyString
+  nome_serie: MyString
+  volume_serie: 1
+  editora: MyString
+  ano: 1
+  edicao: 1
+  isbn: 1
+  data_aquisicao: 2017-06-02
+  origem_aquisicao: MyText
+  classificacao_etaria: false
+  renovavel: false
+  link_download: MyText
+
+two:
+  nome_autor: MyString
+  sobrenome_autor: MyString
+  registro: 1
+  titulo: MyString
+  cdu: 1
+  idioma_livro: MyString
+  nome_serie: MyString
+  volume_serie: 1
+  editora: MyString
+  ano: 1
+  edicao: 1
+  isbn: 1
+  data_aquisicao: 2017-06-02
+  origem_aquisicao: MyText
+  classificacao_etaria: false
+  renovavel: false
+  link_download: MyText

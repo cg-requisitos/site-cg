@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome autor:</strong>
+  <%= @livro.nome_autor %>
+</p>
+
+<p>
+  <strong>Sobrenome autor:</strong>
+  <%= @livro.sobrenome_autor %>
+</p>
+
+<p>
+  <strong>Registro:</strong>
+  <%= @livro.registro %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @livro.titulo %>
+</p>
+
+<p>
+  <strong>Cdu:</strong>
+  <%= @livro.cdu %>
+</p>
+
+<p>
+  <strong>Idioma livro:</strong>
+  <%= @livro.idioma_livro %>
+</p>
+
+<p>
+  <strong>Nome serie:</strong>
+  <%= @livro.nome_serie %>
+</p>
+
+<p>
+  <strong>Volume serie:</strong>
+  <%= @livro.volume_serie %>
+</p>
+
+<p>
+  <strong>Editora:</strong>
+  <%= @livro.editora %>
+</p>
+
+<p>
+  <strong>Ano:</strong>
+  <%= @livro.ano %>
+</p>
+
+<p>
+  <strong>Edicao:</strong>
+  <%= @livro.edicao %>
+</p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @livro.isbn %>
+</p>
+
+<p>
+  <strong>Data aquisicao:</strong>
+  <%= @livro.data_aquisicao %>
+</p>
+
+<p>
+  <strong>Origem aquisicao:</strong>
+  <%= @livro.origem_aquisicao %>
+</p>
+
+<p>
+  <strong>Classificacao etaria:</strong>
+  <%= @livro.classificacao_etaria %>
+</p>
+
+<p>
+  <strong>Renovavel:</strong>
+  <%= @livro.renovavel %>
+</p>
+
+<p>
+  <strong>Link download:</strong>
+  <%= @livro.link_download %>
+</p>
+
+<%= link_to 'Edit', edit_livro_path(@livro) %> |
+<%= link_to 'Back', livros_path %>

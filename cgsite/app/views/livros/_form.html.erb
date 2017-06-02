@@ -1,0 +1,102 @@
+<%= form_with(model: livro, local: true) do |form| %>
+  <% if livro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(livro.errors.count, "error") %> prohibited this livro from being saved:</h2>
+
+      <ul>
+      <% livro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome_autor %>
+    <%= form.text_field :nome_autor, id: :livro_nome_autor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sobrenome_autor %>
+    <%= form.text_field :sobrenome_autor, id: :livro_sobrenome_autor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :registro %>
+    <%= form.number_field :registro, id: :livro_registro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :livro_titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cdu %>
+    <%= form.number_field :cdu, id: :livro_cdu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idioma_livro %>
+    <%= form.text_field :idioma_livro, id: :livro_idioma_livro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome_serie %>
+    <%= form.text_field :nome_serie, id: :livro_nome_serie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :volume_serie %>
+    <%= form.number_field :volume_serie, id: :livro_volume_serie %>
+  </div>
+
+  <div class="field">
+    <%= form.label :editora %>
+    <%= form.text_field :editora, id: :livro_editora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ano %>
+    <%= form.number_field :ano, id: :livro_ano %>
+  </div>
+
+  <div class="field">
+    <%= form.label :edicao %>
+    <%= form.number_field :edicao, id: :livro_edicao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :isbn %>
+    <%= form.number_field :isbn, id: :livro_isbn %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_aquisicao %>
+    <%= form.date_select :data_aquisicao, id: :livro_data_aquisicao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :origem_aquisicao %>
+    <%= form.text_area :origem_aquisicao, id: :livro_origem_aquisicao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :classificacao_etaria %>
+    <%= form.check_box :classificacao_etaria, id: :livro_classificacao_etaria %>
+  </div>
+
+  <div class="field">
+    <%= form.label :renovavel %>
+    <%= form.check_box :renovavel, id: :livro_renovavel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link_download %>
+    <%= form.text_area :link_download, id: :livro_link_download %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
