@@ -29,9 +29,6 @@ class Livro < ApplicationRecord
 
   validates :classificacao_etaria, presence: true
 
-  def classificacao_livro
-  end
-
   validates :renovavel, presence: true
 
 end
