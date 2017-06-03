@@ -1,28 +1,20 @@
 class LivrosController < ApplicationController
   before_action :set_livro, only: [:show, :edit, :update, :destroy]
 
-  # GET /livros
-  # GET /livros.json
   def index
     @livros = Livro.all
   end
 
-  # GET /livros/1
-  # GET /livros/1.json
   def show
   end
 
-  # GET /livros/new
   def new
     @livro = Livro.new
   end
 
-  # GET /livros/1/edit
   def edit
   end
 
-  # POST /livros
-  # POST /livros.json
   def create
     @livro = Livro.new(livro_params)
 
@@ -37,8 +29,6 @@ class LivrosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /livros/1
-  # PATCH/PUT /livros/1.json
   def update
     respond_to do |format|
       if @livro.update(livro_params)
@@ -51,8 +41,6 @@ class LivrosController < ApplicationController
     end
   end
 
-  # DELETE /livros/1
-  # DELETE /livros/1.json
   def destroy
     @livro.destroy
     respond_to do |format|
@@ -62,7 +50,7 @@ class LivrosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+  
     def set_livro
       @livro = Livro.find(params[:id])
     end
