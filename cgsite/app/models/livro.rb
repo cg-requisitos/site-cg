@@ -30,5 +30,4 @@ class Livro < ApplicationRecord
   validates :classificacao_etaria, presence: true
 
   validates :renovavel, presence: true
-
 end
