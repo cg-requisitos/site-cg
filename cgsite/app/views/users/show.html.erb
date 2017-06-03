@@ -1,3 +1,5 @@
+<h1>List of Users</h1>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -43,6 +45,26 @@
 <p>
   <strong>Student shift:</strong>
   <%= @user.student_shift %>
+</p>
+
+<p>
+  <strong>User type:</strong>
+  <%= @user.user_type %>
+</p>
+
+<p>
+  <strong>Account status:</strong>
+  <%= @user.account_status %>
+</p>
+
+<p>
+  <strong>Lib employee:</strong>
+  <%= @user.lib_employee_id %>
+</p>
+
+<p>
+  <strong>Date created:</strong>
+  <%= @user.created_at %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

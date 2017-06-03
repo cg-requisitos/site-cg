@@ -10,6 +10,9 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.date :birthday
       t.string :student_grade
       t.string :student_shift
+      t.integer :user_type
+      t.boolean :account_status
+      t.string :lib_employee_id
 
       t.timestamps
     end

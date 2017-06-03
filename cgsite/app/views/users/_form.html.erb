@@ -56,6 +56,21 @@
     <%= form.text_field :student_shift, id: :user_student_shift %>
   </div>
 
+  <div class="field">
+    <%= form.label :user_type %>
+    <%= form.number_field :user_type, id: :user_user_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :account_status %>
+    <%= form.check_box :account_status, id: :user_account_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lib_employee_id %>
+    <%= form.text_field :lib_employee_id, id: :user_lib_employee_id %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

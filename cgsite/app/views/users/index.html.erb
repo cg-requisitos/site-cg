@@ -14,6 +14,10 @@
       <th>Birthday</th>
       <th>Student grade</th>
       <th>Student shift</th>
+      <th>User type</th>
+      <th>Account status</th>
+      <th>Lib employee</th>
+      <th>Created at</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,6 +34,10 @@
         <td><%= user.birthday %></td>
         <td><%= user.student_grade %></td>
         <td><%= user.student_shift %></td>
+        <td><%= user.user_type %></td>
+        <td><%= user.account_status %></td>
+        <td><%= user.lib_employee_id %></td>
+        <td><%= user.created_at%></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

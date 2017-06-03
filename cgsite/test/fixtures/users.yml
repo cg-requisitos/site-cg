@@ -10,6 +10,9 @@ one:
   birthday: 2017-06-02
   student_grade: MyString
   student_shift: MyString
+  user_type: 1
+  account_status: false
+  lib_employee_id: MyString
 
 two:
   name: MyString
@@ -21,3 +24,6 @@ two:
   birthday: 2017-06-02
   student_grade: MyString
   student_shift: MyString
+  user_type: 1
+  account_status: false
+  lib_employee_id: MyString
