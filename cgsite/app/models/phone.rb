@@ -1,3 +1,3 @@
 class Phone < ApplicationRecord
-  belongs_to :users
+  belongs_to :user, inverse_of: :phones
 end
