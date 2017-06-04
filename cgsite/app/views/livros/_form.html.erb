@@ -97,33 +97,31 @@
   </div>
   <div class = "row">
     <div class="input-field col s12">
-      <div class="select-wrapper">
-      <span class="caret">▼</span>
-      <input type="text" class="select-dropdown" readonly="true" data-activates="select-options-1f76e5e1-d2c2-45ba-62a1-0f70953f6888" value="Choose your option">
-      <ul id="select-options-1f76e5e1-d2c2-45ba-62a1-0f70953f6888" class="dropdown-content select-dropdown" style="width: 199px; position: absolute; top: 0px; left: 0px; opacity: 1; display: none;">
-      <li class="disabled">
-      <span>Classificação etária</span></li><li class="">
-      <span>Option 1</span></li><li class="">
-      <span>Option 2</span></li><li class="">
-      <span>Option 3</span></li></ul>
-      <select class="initialized">
-      <option value="" disabled="" selected="">Classificação etária do livro</option>
-      <option value="1">Classificação livre (Menor de 18 anos)</option>
-      <option value="2">Maior de 18 anos</option>
-      </select>
-      </div>
+      <label>Classificação etária </label>
+      <br><br>
+    <select class="browser-default">
+    <option value="" disabled selected>Escolha a opção desejada</option>
+    <option value="1">Classificação livre (menor de 18 anos)</option>
+    <option value="2">Maior de 18</option>
+    </select>
     </div>
   </div>
   <div class ="row">
     <div class=" input-field col s12">
-     <form action="#">
-    <p> O livro é renovável?
-    <br>
-      <input type="checkbox" id="renovavel" />
-      <label for="test5">Sim</label>
+    <h6> O livro é renovável? </h6>
+    <form action="#">
+    <p>
+      <input name="group1" type="radio" id="renovavel" />
+      <label for="renovavel">Sim</label>
     </p>
+    <p>
+      <input name="group1" type="radio" id="nrenovavel" />
+      <label for="nrenovavel">Não</label>
+    </p>
+    </form>      
     </div>
   </div>
+  <br>
    <div class ="row">
     <div class=" input-field col s12">
       <input placeholder="Link de download do livro" id="link_download" type="text" class="validate">
