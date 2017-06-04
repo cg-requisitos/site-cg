@@ -15,6 +15,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
+    @phone = @user.phones.build
   end
 
   # GET /users/1/edit
@@ -28,6 +29,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        @phone = @user.phones.build(params[:num_phone])
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -69,6 +71,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :email, :password, :address, :phone, :cpf, :birthday, :student_grade, :student_shift, :user_type, :account_status, :lib_employee_id)
+      params.require(:user).permit(:name, :email, :password, :address, :cpf, :birthday, :student_grade, :student_shift, :user_type, :account_status, :lib_employee_id, phones_attributes: :num_phone)
     end
 end
