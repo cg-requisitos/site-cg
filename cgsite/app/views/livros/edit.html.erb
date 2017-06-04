@@ -1,6 +1,17 @@
-<h1>Editing Livro</h1>
-
-<%= render 'form', livro: @livro %>
-
-<%= link_to 'Show', @livro %> |
-<%= link_to 'Back', livros_path %>
+<div class="section no-pad-bot">
+  <div class="container">
+    <br><br>
+    <div class="card teal lighten-1">
+      <br>
+      <h1 class="header center white-text">Editar Livro</h1>
+      <br>
+    </div>
+    <br>
+    <%= render 'form', livro: @livro %>
+    <div style="float: right;">
+      <%= link_to 'Mostrar', @livro, class: "btn waves-effect waves-light green lighten-1 white-text" %>
+      <%= link_to 'Voltar', livros_path, class: "btn waves-effect waves-light red white-text" %>
+    </div>
+    <br><br>
+  </div>
+</div>

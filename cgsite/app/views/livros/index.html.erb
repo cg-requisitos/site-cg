@@ -1,5 +1,9 @@
 <style>
-table, th, td {
+tbody {
+  border: 1px solid black
+  border-left-style: hidden;
+  border-top-style: hidden;
+  border-right-style: hidden;
 }
 </style>
 
@@ -27,7 +31,7 @@ table, th, td {
         <th>Classificação Etária</th>
         <th>Renovável?</th>
         <th>Link Download</th>
-        <th style="border: 0px solid white" colspan="3"></th>
+        <th colspan="1"></th>
       </tr>
     </thead>
     <tbody>
@@ -50,14 +54,21 @@ table, th, td {
           <td><%= livro.classificacao_etaria %></td>
           <td><%= livro.renovavel %></td>
           <td><%= livro.link_download %></td>
-          <td><%= link_to 'Mostrar', livro %></td>
-          <td><%= link_to 'Editar', edit_livro_path(livro) %></td>
-          <td><%= link_to 'Exluir', livro, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+          <td><%= link_to livro_path(livro), class: "btn waves-effect waves-light green lighten-1 white-text" do %>
+            <i class="material-icons">info_outline</i>
+          <% end %>
+          <%= link_to edit_livro_path(livro), class: "btn waves-effect waves-light yellow lighten-2 white-text" do %>
+            <i class="material-icons">create</i>
+          <% end %>
+          <%= link_to livro_path(livro), method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn waves-effect waves-light red white-text" do%>
+            <i class="material-icons">delete</i>
+          <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
+  <hr>
   <br>
   <div style="float: right;">
     <%= link_to new_livro_path, style: "color: white", class: "button btn waves-effect waves-light teal lighten-1 white-text" do %>

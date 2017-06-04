@@ -13,13 +13,13 @@
  <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <div class="field"> 
+      <div class="field">
       <h6> Nome do autor do livro:</h6>
         <%= form.label :nome_autor %>
         <%= form.text_field :nome_autor, id: :livro_nome_autor %>
       </div>
     </div>
-  </div> 
+  </div>
 
   <div class="field">
     <h6> Sobrenome do autor do livro:</h6>
@@ -89,9 +89,9 @@
 
   <div class="field">
     <h6> Data de aquisição do livro:</h6>
-     <label for="data_aquisicao" class="active">Data</label> 
+     <label for="data_aquisicao" class="active">Data</label>
    <input placeholder="Data de aquisição do Livro" id="data_aquisicao" type="date" class="validate">
-     
+
   </div>
 
   <div class="field">
@@ -112,7 +112,7 @@
       <input name="group1" type="radio" id="nlivre" />
       <label for="nlivre">Não</label>
     </p>
-    </form> 
+    </form>
   </div>
 
   <div class="field">
@@ -127,17 +127,21 @@
       <input name="group1" type="radio" id="nrenovavel" />
       <label for="nrenovavel">Não</label>
     </p>
-    </form>  
+    </form>
   </div>
 
   <div class="field">
     <br> <br>
     <h6> Link de download do livro:</h6>
     <%= form.label :link_download %>
-    <%= form.text_area :link_download, id: :livro_link_download %>
+    <%= form.text_area :link_download, id: :livro_link_download do %>
+      <label>Origem Aquisição</label>
+    <% end %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <br>
+  <hr>
+  <br>
+  <div class="actions btn waves-effect waves-light teal lighten-1">
+    <%= form.submit %><i class="material-icons left">save</i>
   </div>
 <% end %>

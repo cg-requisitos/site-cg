@@ -1,89 +1,108 @@
-<p id="notice"><%= notice %></p>
+<div class="section no-pad-bot">
+  <div class="container">
+    <br><br>
+    <div class="card teal lighten-1">
+      <br>
+      <h1 class="header center white-text">Livro</h1>
+      <br>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="card white">
+          <div class="card-content">
+            <p>
+              <strong>Nome autor:</strong>
+              <%= @livro.nome_autor %>
+            </p>
 
-<p>
-  <strong>Nome autor:</strong>
-  <%= @livro.nome_autor %>
-</p>
+            <p>
+              <strong>Sobrenome autor:</strong>
+              <%= @livro.sobrenome_autor %>
+            </p>
 
-<p>
-  <strong>Sobrenome autor:</strong>
-  <%= @livro.sobrenome_autor %>
-</p>
+            <p>
+              <strong>Registro:</strong>
+              <%= @livro.registro %>
+            </p>
 
-<p>
-  <strong>Registro:</strong>
-  <%= @livro.registro %>
-</p>
+            <p>
+              <strong>Titulo:</strong>
+              <%= @livro.titulo %>
+            </p>
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @livro.titulo %>
-</p>
+            <p>
+              <strong>Cdu:</strong>
+              <%= @livro.cdu %>
+            </p>
 
-<p>
-  <strong>Cdu:</strong>
-  <%= @livro.cdu %>
-</p>
+            <p>
+              <strong>Idioma livro:</strong>
+              <%= @livro.idioma_livro %>
+            </p>
 
-<p>
-  <strong>Idioma livro:</strong>
-  <%= @livro.idioma_livro %>
-</p>
+            <p>
+              <strong>Nome serie:</strong>
+              <%= @livro.nome_serie %>
+            </p>
 
-<p>
-  <strong>Nome serie:</strong>
-  <%= @livro.nome_serie %>
-</p>
+            <p>
+              <strong>Volume serie:</strong>
+              <%= @livro.volume_serie %>
+            </p>
 
-<p>
-  <strong>Volume serie:</strong>
-  <%= @livro.volume_serie %>
-</p>
+            <p>
+              <strong>Editora:</strong>
+              <%= @livro.editora %>
+            </p>
 
-<p>
-  <strong>Editora:</strong>
-  <%= @livro.editora %>
-</p>
+            <p>
+              <strong>Ano:</strong>
+              <%= @livro.ano %>
+            </p>
 
-<p>
-  <strong>Ano:</strong>
-  <%= @livro.ano %>
-</p>
+            <p>
+              <strong>Edicao:</strong>
+              <%= @livro.edicao %>
+            </p>
 
-<p>
-  <strong>Edicao:</strong>
-  <%= @livro.edicao %>
-</p>
+            <p>
+              <strong>Isbn:</strong>
+              <%= @livro.isbn %>
+            </p>
 
-<p>
-  <strong>Isbn:</strong>
-  <%= @livro.isbn %>
-</p>
+            <p>
+              <strong>Data aquisicao:</strong>
+              <%= @livro.data_aquisicao %>
+            </p>
 
-<p>
-  <strong>Data aquisicao:</strong>
-  <%= @livro.data_aquisicao %>
-</p>
+            <p>
+              <strong>Origem aquisicao:</strong>
+              <%= @livro.origem_aquisicao %>
+            </p>
 
-<p>
-  <strong>Origem aquisicao:</strong>
-  <%= @livro.origem_aquisicao %>
-</p>
+            <p>
+              <strong>Classificacao etaria:</strong>
+              <%= @livro.classificacao_etaria %>
+            </p>
 
-<p>
-  <strong>Classificacao etaria:</strong>
-  <%= @livro.classificacao_etaria %>
-</p>
+            <p>
+              <strong>Renovavel:</strong>
+              <%= @livro.renovavel %>
+            </p>
 
-<p>
-  <strong>Renovavel:</strong>
-  <%= @livro.renovavel %>
-</p>
-
-<p>
-  <strong>Link download:</strong>
-  <%= @livro.link_download %>
-</p>
-
-<%= link_to 'Edit', edit_livro_path(@livro) %> |
-<%= link_to 'Back', livros_path %>
+            <p>
+              <strong>Link download:</strong>
+              <%= @livro.link_download %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="float: right;">
+      <%= link_to 'Editar', edit_livro_path(@livro), class: "btn waves-effect waves-light yellow lighten-2 white-text" %>
+      <%= link_to 'Voltar', livros_path, class: "btn waves-effect waves-light teal lighten-1 white-text" %>
+    </div>
+    <br><br>
+  </div>
+</div>
