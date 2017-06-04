@@ -1,0 +1,79 @@
+<style>
+tbody {
+  border: 1px solid black
+  border-left-style: hidden;
+  border-top-style: hidden;
+  border-right-style: hidden;
+}
+</style>
+
+<p id="notice"><%= notice %></p>
+<div class="container">
+  <h1 class="card teal lighten-1 white-text center">Livros</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome Autor</th>
+        <th>Sobrenome Autor</th>
+        <th>Registro</th>
+        <th>Título</th>
+        <th>CDU</th>
+        <th>Idioma</th>
+        <th>Nome da Série</th>
+        <th>Volume Série</th>
+        <th>Editora</th>
+        <th>Ano</th>
+        <th>Edição</th>
+        <th>ISBN</th>
+        <th>Data de Aquisição</th>
+        <th>Origem de Aquisição</th>
+        <th>Classificação Etária</th>
+        <th>Renovável?</th>
+        <th>Link Download</th>
+        <th colspan="1"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @livros.each do |livro| %>
+        <tr>
+          <td><%= livro.nome_autor %></td>
+          <td><%= livro.sobrenome_autor %></td>
+          <td><%= livro.registro %></td>
+          <td><%= livro.titulo %></td>
+          <td><%= livro.cdu %></td>
+          <td><%= livro.idioma_livro %></td>
+          <td><%= livro.nome_serie %></td>
+          <td><%= livro.volume_serie %></td>
+          <td><%= livro.editora %></td>
+          <td><%= livro.ano %></td>
+          <td><%= livro.edicao %></td>
+          <td><%= livro.isbn %></td>
+          <td><%= livro.data_aquisicao %></td>
+          <td><%= livro.origem_aquisicao %></td>
+          <td><%= livro.classificacao_etaria %></td>
+          <td><%= livro.renovavel %></td>
+          <td><%= livro.link_download %></td>
+          <td><%= link_to livro_path(livro), class: "btn waves-effect waves-light green lighten-1 white-text" do %>
+            <i class="material-icons">info_outline</i>
+          <% end %>
+          <%= link_to edit_livro_path(livro), class: "btn waves-effect waves-light yellow lighten-2 white-text" do %>
+            <i class="material-icons">create</i>
+          <% end %>
+          <%= link_to livro_path(livro), method: :delete, data: { confirm: 'Tem certeza?' }, class: "btn waves-effect waves-light red white-text" do%>
+            <i class="material-icons">delete</i>
+          <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <hr>
+  <br>
+  <div style="float: right;">
+    <%= link_to new_livro_path, style: "color: white", class: "button btn waves-effect waves-light teal lighten-1 white-text" do %>
+      Novo Livro
+      <i class="material-icons left">add</i>
+    <% end %>
+  </div>
+</div>

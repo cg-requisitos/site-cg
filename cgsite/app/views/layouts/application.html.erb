@@ -3,18 +3,41 @@
   <head>
     <title>Biblioteca CG</title>
     <%= csrf_meta_tags %>
-
-    <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/materialize.min.js"></script>
+    <%= stylesheet_link_tag("style") %>
+    <%= stylesheet_link_tag("materialize") %>
+    <%= stylesheet_link_tag("materialize.min") %>
+    <%= javascript_tag("init") %>
+    <%= javascript_tag("materialize") %>
   </head>
 
   <body>
+    <nav class="teal lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="/" class="brand-logo"><i class="material-icons">book</i>BCG</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/">Log In</a></li>
+          <li><a href="/">Sobre</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="/">Log In</a></li>
+          <li><a href="/">Sobre</a></li>
+        </ul>
+        <a href="/" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
