@@ -56,9 +56,13 @@ footer.page-footer {
   margin: 0;
 }
 
-body{
-  background-image:  url("livro6.png");
+#background_welcome{
+  background-image:  url("background.png");
   background-repeat: no-repeat;
   height: 100%; 
   background-size: cover;
+}
+
+#negrito{
+  font-weight: bold;
 }
