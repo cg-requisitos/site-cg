@@ -1,59 +1,68 @@
+<style>
+table, th, td {
+}
+</style>
+
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <h1 class="card teal lighten-1 white-text center">Livros</h1>
 
-<h1>Livros</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Nome autor</th>
-      <th>Sobrenome autor</th>
-      <th>Registro</th>
-      <th>Titulo</th>
-      <th>Cdu</th>
-      <th>Idioma livro</th>
-      <th>Nome serie</th>
-      <th>Volume serie</th>
-      <th>Editora</th>
-      <th>Ano</th>
-      <th>Edicao</th>
-      <th>Isbn</th>
-      <th>Data aquisicao</th>
-      <th>Origem aquisicao</th>
-      <th>Classificacao etaria</th>
-      <th>Renovavel</th>
-      <th>Link download</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @livros.each do |livro| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= livro.nome_autor %></td>
-        <td><%= livro.sobrenome_autor %></td>
-        <td><%= livro.registro %></td>
-        <td><%= livro.titulo %></td>
-        <td><%= livro.cdu %></td>
-        <td><%= livro.idioma_livro %></td>
-        <td><%= livro.nome_serie %></td>
-        <td><%= livro.volume_serie %></td>
-        <td><%= livro.editora %></td>
-        <td><%= livro.ano %></td>
-        <td><%= livro.edicao %></td>
-        <td><%= livro.isbn %></td>
-        <td><%= livro.data_aquisicao %></td>
-        <td><%= livro.origem_aquisicao %></td>
-        <td><%= livro.classificacao_etaria %></td>
-        <td><%= livro.renovavel %></td>
-        <td><%= livro.link_download %></td>
-        <td><%= link_to 'Show', livro %></td>
-        <td><%= link_to 'Edit', edit_livro_path(livro) %></td>
-        <td><%= link_to 'Destroy', livro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nome Autor</th>
+        <th>Sobrenome Autor</th>
+        <th>Registro</th>
+        <th>Título</th>
+        <th>CDU</th>
+        <th>Idioma</th>
+        <th>Nome da Série</th>
+        <th>Volume Série</th>
+        <th>Editora</th>
+        <th>Ano</th>
+        <th>Edição</th>
+        <th>ISBN</th>
+        <th>Data de Aquisição</th>
+        <th>Origem de Aquisição</th>
+        <th>Classificação Etária</th>
+        <th>Renovável?</th>
+        <th>Link Download</th>
+        <th style="border: 0px solid white" colspan="3"></th>
       </tr>
+    </thead>
+    <tbody>
+      <% @livros.each do |livro| %>
+        <tr>
+          <td><%= livro.nome_autor %></td>
+          <td><%= livro.sobrenome_autor %></td>
+          <td><%= livro.registro %></td>
+          <td><%= livro.titulo %></td>
+          <td><%= livro.cdu %></td>
+          <td><%= livro.idioma_livro %></td>
+          <td><%= livro.nome_serie %></td>
+          <td><%= livro.volume_serie %></td>
+          <td><%= livro.editora %></td>
+          <td><%= livro.ano %></td>
+          <td><%= livro.edicao %></td>
+          <td><%= livro.isbn %></td>
+          <td><%= livro.data_aquisicao %></td>
+          <td><%= livro.origem_aquisicao %></td>
+          <td><%= livro.classificacao_etaria %></td>
+          <td><%= livro.renovavel %></td>
+          <td><%= livro.link_download %></td>
+          <td><%= link_to 'Mostrar', livro %></td>
+          <td><%= link_to 'Editar', edit_livro_path(livro) %></td>
+          <td><%= link_to 'Exluir', livro, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  <div style="float: right;">
+    <%= link_to new_livro_path, style: "color: white", class: "button btn waves-effect waves-light teal lighten-1 white-text" do %>
+      Novo Livro
+      <i class="material-icons left">add</i>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Livro', new_livro_path %>
+  </div>
+</div>
