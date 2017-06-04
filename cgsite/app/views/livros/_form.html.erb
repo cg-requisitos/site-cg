@@ -10,105 +10,114 @@
       </ul>
     </div>
   <% end %>
+ <div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="field"> 
+      <h6> Nome do autor do livro:</h6>
+        <%= form.label :nome_autor %>
+        <%= form.text_field :nome_autor, id: :livro_nome_autor %>
+      </div>
+    </div>
+  </div> 
 
-  <div class ="row">
-    <form class="col s12">
-      <div class="input-field col s6">
-        <input placeholder="Insira o nome aqui" id="nome_autor" type="text" class="validate">
-        <label for="nome_autor" class="active">Primeiro nome</label>
-      </div>
-      <div class="input-field col s6">
-        <input placeholder="Insira o sobrenome aqui" id="sobrenome_autor" type="text" class="validate">
-        <label for="sobrenome_autor" class="active">Sobrenome</label>
-      </div>
-    </form>
+  <div class="field">
+    <h6> Sobrenome do autor do livro:</h6>
+    <%= form.label :sobrenome_autor %>
+    <%= form.text_field :sobrenome_autor, id: :livro_sobrenome_autor %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Registro do livro" id="registro" type="text" class="validate">
-      <label for="nome_autor" class="active">Registro</label>
-    </div>
+
+  <div class="field">
+  <h6> Registro do livro:</h6>
+    <%= form.label :registro %>
+    <%= form.number_field :registro, id: :livro_registro %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Titulo do livro" id="livro_titulo" type="text" class="validate">
-      <label for="nome_autor" class="active">Titulo</label>
-    </div>
+
+  <div class="field">
+    <h6> Título do livro:</h6>
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo, id: :livro_titulo %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="cdu" id="cdu" type="text" class="validate">
-      <label for="nome_autor" class="active">CDU</label>
-    </div>
+
+  <div class="field">
+  <h6> CDU do livro:</h6>
+    <%= form.label :cdu %>
+    <%= form.number_field :cdu, id: :livro_cdu %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Idioma do Livro" id="idioma_livro" type="text" class="validate">
-      <label for="idioma_livro" class="active">Idioma</label>
-    </div>
+
+  <div class="field">
+    <h6> Idioma do livro:</h6>
+    <%= form.label :idioma_livro %>
+    <%= form.text_field :idioma_livro, id: :livro_idioma_livro %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Nome da coleção ou da serie de livros" id="nome_serie" type="text" class="validate">
-      <label for="nome_serie" class="active">Serie ou Coleção</label>
-    </div>
+
+  <div class="field">
+    <h6> Serie ou coleção do livro:</h6>
+    <%= form.label :nome_serie %>
+    <%= form.text_field :nome_serie, id: :livro_nome_serie %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Volume da serie ou da coleção" id="volume_serie" type="number" class="validate">
-      <label for="volume_serie" class="active">Volume</label>
-    </div>
+
+  <div class="field">
+  <h6> Volume da série ou coleção livro:</h6>
+    <%= form.label :volume_serie %>
+    <%= form.number_field :volume_serie, id: :livro_volume_serie %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Editora Livro" id="editora" type="text" class="validate">
-      <label for="editora" class="active">Editora</label>
-    </div>
+
+  <div class="field">
+    <h6> Editora do livro:</h6>
+    <%= form.label :editora %>
+    <%= form.text_field :editora, id: :livro_editora %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Ano de publicação" id="ano" type="date" class="validate">
-      <label for="ano" class="active">Ano</label>
-    </div>
+
+  <div class="field">
+    <h6> Ano de publicação:</h6>
+    <%= form.label :ano %>
+    <%= form.number_field :ano, id: :livro_ano %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Edição do Livro" id="edicao" type="number" class="validate">
-      <label for="edicao" class="active">Edição</label>
-    </div>
+
+  <div class="field">
+    <h6> Edição do livro:</h6>
+    <%= form.label :edicao %>
+    <%= form.number_field :edicao, id: :livro_edicao %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="ISBN do Livro" id="isbn" type="text" class="validate">
-      <label for="isbn" class="active">ISBN</label>
-    </div>
+
+  <div class="field">
+    <h6> ISBN do livro:</h6>
+    <%= form.label :isbn %>
+    <%= form.number_field :isbn, id: :livro_isbn %>
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Data de aquisição do Livro" id="data_aquisicao" type="date" class="validate">
-      <label for="data_aquisicao" class="active">Data</label>
-    </div>
+
+  <div class="field">
+    <h6> Data de aquisição do livro:</h6>
+     <label for="data_aquisicao" class="active">Data</label> 
+   <input placeholder="Data de aquisição do Livro" id="data_aquisicao" type="date" class="validate">
+     
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Origem de aquisição do livro" id="origem_aquisicao" type="text" class="validate">
-      <label for="origem_aquisicao" class="active">Origem</label>
-    </div>
+
+  <div class="field">
+    <h6> Origem de aquisição:</h6>
+    <%= form.label :origem_aquisicao %>
+    <%= form.text_area :origem_aquisicao, id: :livro_origem_aquisicao %>
   </div>
-  <div class = "row">
-    <div class="input-field col s12">
-      <label>Classificação etária </label>
-      <br><br>
-    <select class="browser-default">
-    <option value="" disabled selected>Escolha a opção desejada</option>
-    <option value="1">Classificação livre (menor de 18 anos)</option>
-    <option value="2">Maior de 18</option>
-    </select>
-    </div>
+
+  <div class="field">
+  <br>
+  <h6> O livro possui classificação livre?</h6>
+   <form action="#">
+    <p>
+      <input name="group1" type="radio" id="livre" />
+      <label for="livre">Sim</label>
+    </p>
+    <p>
+      <input name="group1" type="radio" id="nlivre" />
+      <label for="nlivre">Não</label>
+    </p>
+    </form> 
   </div>
-  <div class ="row">
-    <div class=" input-field col s12">
-    <h6> O livro é renovável? </h6>
+
+  <div class="field">
+    <br><br>
+    <h6> O livro é renovável?</h6>
     <form action="#">
     <p>
       <input name="group1" type="radio" id="renovavel" />
@@ -118,17 +127,17 @@
       <input name="group1" type="radio" id="nrenovavel" />
       <label for="nrenovavel">Não</label>
     </p>
-    </form>      
-    </div>
+    </form>  
   </div>
-  <br>
-   <div class ="row">
-    <div class=" input-field col s12">
-      <input placeholder="Link de download do livro" id="link_download" type="text" class="validate">
-      <label for="link_download" class="active">Download</label>
-    </div>
+
+  <div class="field">
+    <br> <br>
+    <h6> Link de download do livro:</h6>
+    <%= form.label :link_download %>
+    <%= form.text_area :link_download, id: :livro_link_download %>
   </div>
-  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
-  </button>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
 <% end %>

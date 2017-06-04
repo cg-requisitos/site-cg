@@ -17,17 +17,9 @@ class Livro < ApplicationRecord
 
   validates :editora, presence: true
 
-  validates :ano, presence: true
-
   validates :edicao, presence: true, numericality: {greater_than: 0}
 
-  validates :isbn, presence: true, length: {minimum: 13, maximum: 13}
-
-  validates :data_aquisicao, presence: true
-
+  validates :isbn, presence: true
+ 
   validates :origem_aquisicao, presence: true
-
-  validates :classificacao_etaria, presence: true
-
-  validates :renovavel, presence: true
 end
