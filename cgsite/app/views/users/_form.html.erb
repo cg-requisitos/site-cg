@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <!-- <div class="field">
+    <%= form.label :user_type %>
+    <%= form.number_field :user_type, id: :user_user_type %>
+  </div> -->
+
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :user_name %>
@@ -71,11 +76,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :user_type %>
-    <%= form.number_field :user_type, id: :user_user_type %>
-  </div>
-
-  <div class="field">
     <%= form.label :account_status %>
     <%= form.check_box :account_status, id: :user_account_status %>
   </div>
@@ -85,7 +85,10 @@
     <%= form.text_field :lib_employee_id, id: :user_lib_employee_id %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <br>
+  <hr>
+  <br>
+  <div class="actions btn waves-effect waves-light teal lighten-1">
+    <%= form.submit %><i class="material-icons left">save</i>
   </div>
 <% end %>

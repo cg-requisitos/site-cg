@@ -1,5 +1,19 @@
-<h1>New User</h1>
+<div class="section no-pad-bot">
+	<div class="container">
+    	<br><br>
+    	<div class="card teal lighten-1">
+     	 <br>
+      	<h1 class="header center white-text">Novo Livro</h1>
+      	<br>
+    	</div>
+  	</div>
+  	<br>
+	<div class="container">
 
-<%= render 'form', user: @user %>
+	<%= render 'form', user: @user %>
 
-<%= link_to 'Back', users_path %>
+	<a style="float: right" href="/users" id="download-button" class="btn waves-effect waves-light teal lighten-1"><i class="material-icons left">undo</i> Voltar</a>
+	</div>
+  <br>
+  <br>
+</div>
