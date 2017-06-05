@@ -1,73 +1,93 @@
-<h1>List of Users</h1>
+<div class="section no-pad-bot">
+  <div class="container">
+      <br><br>
+      <div class="card teal lighten-1">
+       <br>
+        <h1 class="header center white-text">Informações do Usuário</h1>
+        <br>
+      </div>
+    </div>
+    <br>
+  <div class="container">
 
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <h5>Nome:</h5>
   <%= @user.name %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <h5>Número do Usuário:</h5>
+  <%= @user.id %>
+</p>
+
+<p>
+  <h5>E-mail:</h5>
   <%= @user.email %>
 </p>
 
 <p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
-
-<p>
-  <strong>Address:</strong>
+  <h5>Endereço:</h5>
   <%= @user.address %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <h5>Telefone:</h5>
   <% @user.phones.each do |p| %>
     <%= p.num_phone %>
   <% end %>
 </p>
 
 <p>
-  <strong>Cpf:</strong>
+  <h5>CPF:</h5>
   <%= @user.cpf %>
 </p>
 
 <p>
-  <strong>Birthday:</strong>
+  <h5>Data de Nascimento:</h5>
   <%= @user.birthday %>
 </p>
 
 <p>
-  <strong>Student grade:</strong>
+  <h5>Série:</h5>
   <%= @user.student_grade %>
 </p>
 
 <p>
-  <strong>Student shift:</strong>
+  <h5>Turno:</h5>
   <%= @user.student_shift %>
 </p>
 
 <p>
-  <strong>User type:</strong>
+  <h5>Tipo de usário:</h5>
   <%= @user.user_type %>
 </p>
 
 <p>
-  <strong>Account status:</strong>
+  <h5>Estado da conta:</h5>
   <%= @user.account_status %>
 </p>
 
 <p>
-  <strong>Lib employee:</strong>
+  <h5>Matrícula da biblioteca:</h5>
   <%= @user.lib_employee_id %>
 </p>
 
 <p>
-  <strong>Date created:</strong>
+  <h5>Data de cadastro:</h5>
   <%= @user.created_at %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="actions btn waves-effect waves-light teal lighten-1">
+<%= link_to 'Editar', edit_user_path(@user) %>
+</div>
+
+<div style="float: right" href="/users" id="download-button" class="btn waves-effect waves-light teal lighten-1">
+<%= link_to 'Voltar', users_path %>
+<i class="material-icons left">undo</i>
+</div>
+
+  <br>
+  <br>
+</div>
