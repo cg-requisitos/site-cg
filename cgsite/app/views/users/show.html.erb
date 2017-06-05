@@ -24,7 +24,9 @@
 
 <p>
   <strong>Phone:</strong>
-  <%= @user.phone %>
+  <% @user.phones.each do |p| %>
+    <%= p.num_phone %>
+  <% end %>
 </p>
 
 <p>

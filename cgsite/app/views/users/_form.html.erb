@@ -31,12 +31,23 @@
     <%= form.text_field :address, id: :user_address %>
   </div>
 
+
   <%= form.fields_for :phones do |ff| %>
     <div class="field">
-      <%= form.label :phone %>
+      <%= form.label "Phone" %>
       <!-- <%= form.text_field :phone, id: :user_phone %> -->
       <%= ff.text_field :num_phone, id: 'num_phone'%>
     </div>
+  <% end %>
+
+  <% if !@user.id %>
+  <%= form.fields_for :phones do |ff| %>
+    <div class="field">
+      <%= form.label "Phone" %>
+      <!-- <%= form.text_field :phone, id: :user_phone %> -->
+      <%= ff.text_field :num_phone, id: 'num_phone'%>
+    </div>
+  <% end %>
   <% end %>
 
   <div class="field">
