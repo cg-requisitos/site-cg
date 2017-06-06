@@ -1,0 +1,93 @@
+<div class="section no-pad-bot">
+  <div class="container">
+      <br><br>
+      <div class="card teal lighten-1">
+       <br>
+        <h1 class="header center white-text">Informações do Usuário</h1>
+        <br>
+      </div>
+    </div>
+    <br>
+  <div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h5>Nome:</h5>
+  <%= @user.name %>
+</p>
+
+<p>
+  <h5>Número do Usuário:</h5>
+  <%= @user.id %>
+</p>
+
+<p>
+  <h5>E-mail:</h5>
+  <%= @user.email %>
+</p>
+
+<p>
+  <h5>Endereço:</h5>
+  <%= @user.address %>
+</p>
+
+<p>
+  <h5>Telefone:</h5>
+  <% @user.phones.each do |p| %>
+    <%= p.num_phone %>
+  <% end %>
+</p>
+
+<p>
+  <h5>CPF:</h5>
+  <%= @user.cpf %>
+</p>
+
+<p>
+  <h5>Data de Nascimento:</h5>
+  <%= @user.birthday %>
+</p>
+
+<p>
+  <h5>Série:</h5>
+  <%= @user.student_grade %>
+</p>
+
+<p>
+  <h5>Turno:</h5>
+  <%= @user.student_shift %>
+</p>
+
+<p>
+  <h5>Tipo de usário:</h5>
+  <%= @user.user_type %>
+</p>
+
+<p>
+  <h5>Estado da conta:</h5>
+  <%= @user.account_status %>
+</p>
+
+<p>
+  <h5>Matrícula da biblioteca:</h5>
+  <%= @user.lib_employee_id %>
+</p>
+
+<p>
+  <h5>Data de cadastro:</h5>
+  <%= @user.created_at %>
+</p>
+
+<div class="actions btn waves-effect waves-light teal lighten-1">
+<%= link_to 'Editar', edit_user_path(@user) %>
+</div>
+
+<div style="float: right" href="/users" id="download-button" class="btn waves-effect waves-light teal lighten-1">
+<%= link_to 'Voltar', users_path %>
+<i class="material-icons left">undo</i>
+</div>
+
+  <br>
+  <br>
+</div>

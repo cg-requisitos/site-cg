@@ -1,0 +1,94 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- <div class="field">
+    <%= form.label :user_type %>
+    <%= form.number_field :user_type, id: :user_user_type %>
+  </div> -->
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :user_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :user_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.text_field :password, id: :user_password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :user_address %>
+  </div>
+
+
+  <%= form.fields_for :phones do |ff| %>
+    <div class="field">
+      <%= form.label "Phone" %>
+      <!-- <%= form.text_field :phone, id: :user_phone %> -->
+      <%= ff.text_field :num_phone, id: 'num_phone'%>
+    </div>
+  <% end %>
+
+  <% if !@user.id %>
+  <%= form.fields_for :phones do |ff| %>
+    <div class="field">
+      <%= form.label "Phone" %>
+      <!-- <%= form.text_field :phone, id: :user_phone %> -->
+      <%= ff.text_field :num_phone, id: 'num_phone'%>
+    </div>
+  <% end %>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf, id: :user_cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthday %>
+    <%= form.date_select :birthday, id: :user_birthday %>
+  </div>
+
+  <div class="field">
+    <%= form.label :student_grade %>
+    <%= form.text_field :student_grade, id: :user_student_grade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :student_shift %>
+    <%= form.text_field :student_shift, id: :user_student_shift %>
+  </div>
+
+  <div class="field">
+    <%= form.label :account_status %>
+    <%= form.check_box :account_status, id: :user_account_status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lib_employee_id %>
+    <%= form.text_field :lib_employee_id, id: :user_lib_employee_id %>
+  </div>
+
+  <br>
+  <hr>
+  <br>
+  <div class="actions btn waves-effect waves-light teal lighten-1">
+    <%= form.submit %><i class="material-icons left">save</i>
+  </div>
+<% end %>
